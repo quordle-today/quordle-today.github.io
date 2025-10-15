@@ -19,6 +19,116 @@
 				background-color: #fff!important;
 			}
 		</style>
+		<style>
+/* ===== Article Container ===== */
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  line-height: 1.7;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #333;
+  background: #fff;
+}
+
+/* ===== Headings ===== */
+h1 {
+  font-size: 2.2rem;
+  color: #111;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: #222;
+  font-weight: 600;
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
+
+/* ===== Paragraphs ===== */
+p {
+  margin-bottom: 18px;
+}
+
+/* ===== Lists ===== */
+ul, ol {
+  margin-left: 25px;
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* ===== Links ===== */
+a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+/* ===== Color Hints (Wordle-style Tiles) ===== */
+span[style*="background-color"] {
+  display: inline-block;
+  min-width: 24px;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #fff !important;
+  font-size: 0.9rem;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* Optional: Make the color boxes look like Wordle tiles */
+.tile-green {
+  background-color: #6aaa64;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+}
+
+.tile-yellow {
+  background-color: #c9b458;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+}
+
+.tile-gray {
+  background-color: #787c7e;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}
+</style>
+
     </head>
     <body>
         <div class="App-header">
@@ -52,9 +162,9 @@
     <li>Type in a five-letter word and press Enter.</li>
     <li>Each of the four grids will show clues:
       <ul>
-        <li><span style="background-color: #6aaa64; color: white; padding: 2px 6px; border-radius: 3px;">Green</span> – The letter is correct and in the right spot.</li>
-        <li><span style="background-color: #c9b458; color: white; padding: 2px 6px; border-radius: 3px;">Yellow</span> – The letter is in the word but in the wrong spot.</li>
-        <li><span style="background-color: #787c7e; color: white; padding: 2px 6px; border-radius: 3px;">Gray</span> – The letter is not in the word.</li>
+<li><span class="tile-green">Green</span> – The letter is correct and in the right spot.</li>
+<li><span class="tile-yellow">Yellow</span> – The letter is in the word but in the wrong spot.</li>
+<li><span class="tile-gray">Gray</span> – The letter is not in the word.</li>
       </ul>
     </li>
     <li>Keep guessing until you solve all four words within nine tries!</li>
